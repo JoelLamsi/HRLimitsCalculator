@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
-  const [age, setAge] = useState('');
-  const [lowerRate, setLowerRate] = useState(0);
-  const [upperRate, setUpperRate] = useState(0);
+  const [age, setAge] = useState<string>('');
+  const [lowerRate, setLowerRate] = useState<number>(0);
+  const [upperRate, setUpperRate] = useState<number>(0);
 
   function calculate(text: string) {
     if (isNaN(Number(text)) || text === null || text === "") {
